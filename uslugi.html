@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Услуги · Ясно, стоматология в Казани</title>
+<meta name="description" content="Услуги стоматологии «Ясно» в Казани: лечение кариеса и каналов, гигиена, отбеливание, удаление, имплантация, коронки, брекеты и элайнеры, детская стоматология. Цена письменно до начала.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Manrope:wght@400;500;600&display=block" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%274%27 y=%274%27 width=%2724%27 height=%2724%27 rx=%2710%27 fill=%27%233a3740%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%275%27 fill=%27%23f6f4f1%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  .v-page {
+    --v-canvas: #f6f4f1; --v-surface: #ffffff;
+    --v-ink: #26242a; --v-ink-soft: #5f5a62;
+    --v-accent: #3a3740; --v-accent-ink: #f8f6f3;
+    --v-accent-deep: #5b5560;
+    --v-font-display: "Rubik", "Arial Rounded MT Bold", system-ui, sans-serif;
+    --v-font-text: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 500;
+    --v-track-tight: -0.02em;
+    --v-shadow-color: 45 40 44;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .06), 0 8px 22px rgb(var(--v-shadow-color) / .08);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .08), 0 22px 54px rgb(var(--v-shadow-color) / .14);
+    --v-radius: 16px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --v-section: clamp(3.5rem, 8vw, 7rem);
+  }
+  html, body { margin: 0; background: #f6f4f1; }
+  .v-page .v-lede { font-weight: 400; }
+  .v-page .v-label { font-weight: 600; }
+  .v-page .v-btn { font-size: var(--v-t-sm); }
+
+  /* шапка */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter);
+    background: rgb(246 244 241 / 0); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(246 244 241 / .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); letter-spacing: -0.01em; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; min-height: 44px; white-space: nowrap; }
+  .bar__mark i { width: .8em; height: .8em; border-radius: .3em; background: var(--v-accent); display: inline-block; position: relative; flex: none; }
+  .bar__mark i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 34%; height: 34%; margin: -17% 0 0 -17%; border-radius: 50%; background: var(--v-canvas); }
+  .qnav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+  .qnav a { text-decoration: none; color: var(--v-ink-soft); display: inline-flex; align-items: center; gap: .4em; min-height: 44px; transition: color .16s var(--v-ease-out); }
+  .qnav a[aria-current="page"] { color: var(--v-ink); box-shadow: inset 0 -2px 0 var(--v-accent); }
+  @media (hover: hover) and (pointer: fine) { .qnav a:hover { color: var(--v-ink); } }
+  .bar__right { display: flex; align-items: center; gap: var(--v-4); }
+  .bar__tel { text-decoration: none; font-weight: 600; font-size: var(--v-t-sm); color: var(--v-ink); display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-2); white-space: nowrap; }
+  .bar .v-btn { padding: .7em 1.3em; }
+  @media (max-width: 1100px) { .qnav { display: none; } }
+  @media (max-width: 700px) {
+    .bar__tel { display: none; }
+    .bar__mark { font-size: 1.1rem; }
+    .bar .v-btn { padding: 0 1em; min-height: 44px; }
+    .bar__right { gap: var(--v-2); }
+  }
+
+  /* заголовок страницы */
+  .pagehead { padding-top: clamp(7rem, 16vh, 10rem); }
+  .pagehead .v-label { display: block; margin-bottom: var(--v-4); color: var(--v-accent-deep); }
+  .pagehead .v-display { font-size: clamp(2rem, 1.2rem + 2.6vw, 3.4rem); max-width: 20ch; }
+  .pagehead p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 56ch; font-size: var(--v-t-md, 1.125rem); text-wrap: pretty; }
+  .idx { margin-top: var(--v-6); display: flex; flex-wrap: wrap; gap: .5em; }
+  .idx a { font-size: var(--v-t-sm); text-decoration: none; color: var(--v-ink); background: var(--v-surface); border: 1px solid var(--v-hair); border-radius: 999px; padding: .45em 1em; transition: border-color .16s var(--v-ease-out), color .16s var(--v-ease-out); }
+  @media (hover: hover) { .idx a:hover { border-color: var(--v-accent); } }
+
+  /* лента услуг: фото слева, текст справа, единый ритм */
+  .svc { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--v-8) var(--v-9); align-items: start; }
+  .svc + .svc { margin-top: var(--v-9); }
+  .svc__fig { position: relative; aspect-ratio: 3 / 2; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); background: var(--v-surface); }
+  .svc__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .svc__fig figcaption { position: absolute; left: var(--v-5); bottom: var(--v-4); font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); background: rgb(255 255 255 / .82); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); padding: .35em .8em; border-radius: 999px; }
+  .svc__no { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-sm); color: var(--v-accent-deep); font-variant-numeric: tabular-nums; }
+  .svc h2 { font-family: var(--v-font-display); font-weight: 500; font-size: clamp(1.6rem, 1.1rem + 1.6vw, 2.3rem); letter-spacing: var(--v-track-tight); line-height: 1.08; margin-top: var(--v-2); text-wrap: balance; }
+  .svc__lead { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 52ch; text-wrap: pretty; }
+  .svc__inc { margin-top: var(--v-5); list-style: none; padding: 0; }
+  .svc__inc li { padding: var(--v-3) 0; border-top: 1px solid var(--v-hair); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--v-3); align-items: baseline; font-size: var(--v-t-sm); color: var(--v-ink); }
+  .svc__inc li::before { content: ""; width: .5em; height: .5em; border-radius: 50%; background: var(--v-accent); transform: translateY(-.1em); }
+  .svc__inc li span { color: var(--v-ink-soft); }
+  .svc__foot { margin-top: var(--v-5); display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); }
+  .svc__sum { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-xl); color: var(--v-accent-deep); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .svc__sum small { display: block; font-family: var(--v-font-text); font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: var(--v-track-wide); text-transform: uppercase; margin-top: .2em; }
+  @media (max-width: 860px) {
+    .svc { grid-template-columns: 1fr; gap: var(--v-5); }
+    .svc + .svc { margin-top: var(--v-8); }
+  }
+
+  /* передышка-цитата между услугами */
+  .rule { text-align: center; padding: var(--v-8) 0; }
+  .rule p { font-family: var(--v-font-display); font-weight: 500; font-size: clamp(1.4rem, 1rem + 1.6vw, 2.1rem); letter-spacing: var(--v-track-tight); line-height: 1.2; max-width: 26ch; margin-inline: auto; text-wrap: balance; }
+  .rule small { display: block; margin-top: var(--v-4); color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+
+  /* финал */
+  .close { position: relative; z-index: 3; display: grid; grid-template-rows: 1fr auto; padding: 0 var(--v-gutter);
+    background: radial-gradient(60rem 40rem at calc(var(--v-mx, .7) * 100%) calc(var(--v-my, .4) * 100%), rgb(58 55 64 / .1), transparent 60%); }
+  .close__inner { align-self: center; max-width: 46rem; padding-top: var(--v-9); }
+  .close__inner .v-label { display: block; margin-bottom: var(--v-5); }
+  .close__inner .v-display { font-size: var(--v-t-3xl); line-height: 1; max-width: 14ch; }
+  .close__inner p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 40ch; text-wrap: pretty; }
+  .close__btns { margin-top: var(--v-6); display: flex; flex-wrap: wrap; gap: var(--v-3); }
+  .foot { display: grid; grid-template-columns: auto 1fr auto; gap: var(--v-4) var(--v-6); align-items: baseline; padding: var(--v-6) var(--v-gutter); border-top: 1px solid var(--v-hair);
+    background: rgb(246 244 241 / .84); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .foot__warn { grid-column: 1 / -1; color: var(--v-ink); font-weight: 600; letter-spacing: .01em; }
+  @media (max-width: 860px) {
+    .close__inner .v-display { font-size: var(--v-t-2xl); max-width: none; }
+    .foot { grid-template-columns: 1fr; gap: var(--v-2); font-size: var(--v-t-sm); padding: var(--v-5) var(--v-gutter) calc(var(--v-5) + env(safe-area-inset-bottom)); }
+    .foot__more { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="index.html"><i aria-hidden="true"></i>Ясно</a>
+    <nav class="qnav" aria-label="Разделы сайта">
+      <a href="uslugi.html" aria-current="page">Услуги</a>
+      <a href="tseny.html">Цены</a>
+      <a href="vrachi.html">Врачи</a>
+      <a href="o-klinike.html">О клинике</a>
+      <a href="kontakty.html">Контакты</a>
+    </nav>
+    <div class="bar__right">
+      <a class="bar__tel" href="tel:+78432070000">+7 (843) 207-00-00</a>
+      <a class="v-btn" href="kontakty.html#zapis">Записаться</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="v-section pagehead" data-v-act="flow" data-v-drift="#f6f4f1" aria-label="Услуги клиники">
+      <div class="v-wrap">
+        <div data-v-in data-v-stagger="70">
+          <span class="v-label">Услуги</span>
+          <h1 class="v-display">Лечим спокойно: от гигиены до имплантации</h1>
+          <p>Взрослым и детям, в одном кабинете и у своего врача. По каждой услуге – письменный план и цена до начала лечения. Если не нашли свою ситуацию, начните с осмотра: врач посмотрит и напишет план по пунктам.</p>
+        </div>
+        <nav class="idx" data-v-in aria-label="По услугам">
+          <a href="#gigiena">Гигиена</a>
+          <a href="#karies">Кариес и каналы</a>
+          <a href="#otbelivanie">Отбеливание</a>
+          <a href="#udalenie">Удаление</a>
+          <a href="#implantatsiya">Имплантация</a>
+          <a href="#koronki">Коронки и виниры</a>
+          <a href="#ortodontiya">Брекеты и элайнеры</a>
+          <a href="#detskaya">Детская</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#efece7" id="gigiena" aria-label="Профессиональная гигиена">
+      <div class="v-wrap svc">
+        <figure class="svc__fig" data-v-reveal="left" data-v-reveal-at="0.1 0.5">
+          <img src="assets/usl-gigiena.webp" alt="Лоток для профессиональной гигиены: ультразвуковой наконечник, полировочные чашки, пакеты с инструментами у кресла" width="1200" height="800" loading="lazy" decoding="async">
+          <figcaption>Кабинет гигиены</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="70">
+          <span class="svc__no">01</span>
+          <h2>Профессиональная гигиена</h2>
+          <p class="svc__lead">Ультразвук снимает твёрдые отложения, порошок – пигмент с чая и кофе, полировка делает поверхность гладкой, чтобы налёт приставал медленнее. Один визит, около часа.</p>
+          <ul class="svc__inc">
+            <li>Ультразвуковая чистка <span>все зубы, включая труднодоступные</span></li>
+            <li>Пескоструйная обработка <span>пигмент с эмали</span></li>
+            <li>Полировка и покрытие <span>гладкая поверхность, рекомендации по уходу</span></li>
+          </ul>
+          <div class="svc__foot">
+            <span class="svc__sum">4&nbsp;500&nbsp;₽<small>один визит · около часа</small></span>
+            <a class="v-btn v-btn--ghost" href="kontakty.html#zapis">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f6f4f1" id="karies" aria-label="Лечение кариеса и каналов">
+      <div class="v-wrap svc">
+        <figure class="svc__fig" data-v-reveal="left" data-v-reveal-at="0.1 0.5">
+          <img src="assets/usl-karies.webp" alt="Операционный микроскоп у кресла: лечение под увеличением" width="1200" height="800" loading="lazy" decoding="async">
+          <figcaption>Лечение под микроскопом</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="70">
+          <span class="svc__no">02</span>
+          <h2>Лечение кариеса и каналов</h2>
+          <p class="svc__lead">Сначала анестезия, потом – всё остальное. Работаем под микроскопом: видно больше, значит, сверлим меньше. Пломбу ставим за один визит, каналы лечим по письменному плану с ценой каждого этапа.</p>
+          <ul class="svc__inc">
+            <li>Анестезия перед лечением <span>всегда, без обсуждений</span></li>
+            <li>Работа под микроскопом <span>точность, меньше здоровых тканей в затрате</span></li>
+            <li>Пломба за один визит <span>полировка по прикусываемой поверхности</span></li>
+            <li>Лечение каналов по плану <span>два-три визита, цена каждого этапа записана</span></li>
+          </ul>
+          <div class="svc__foot">
+            <span class="svc__sum">от 3&nbsp;500&nbsp;₽<small>точная цена – в плане до начала</small></span>
+            <a class="v-btn v-btn--ghost" href="kontakty.html#zapis">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#efece7" id="otbelivanie" aria-label="Отбеливание">
+      <div class="v-wrap svc">
+        <figure class="svc__fig" data-v-reveal="left" data-v-reveal-at="0.1 0.5">
+          <img src="assets/usl-otbel.webp" alt="LED-лампа отбеливания у кресла в светлом кабинете" width="1200" height="800" loading="lazy" decoding="async">
+          <figcaption>Отбеливание в кресле</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="70">
+          <span class="svc__no">03</span>
+          <h2>Отбеливание</h2>
+          <p class="svc__lead">Только после осмотра и гигиены: отбеливать больные зубы или зубы под налётом нельзя, это больно и бессмысленно. Сначала здоровье, потом цвет. Оттенок, который хотим получить, согласуем до начала.</p>
+          <ul class="svc__inc">
+            <li>Осмотр и гигиена до процедуры <span>убедимся, что отбеливать безопасно</span></li>
+            <li>Защита дёсен <span>изолирующий барьер, губы и дёсны закрыты</span></li>
+            <li>Оттенок согласуем до начала <span>смотрим шкалу вместе, решаете вы</span></li>
+          </ul>
+          <div class="svc__foot">
+            <span class="svc__sum">от 15&nbsp;000&nbsp;₽<small>один визит</small></span>
+            <a class="v-btn v-btn--ghost" href="kontakty.html#zapis">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f6f4f1" id="udalenie" aria-label="Удаление зубов">
+      <div class="v-wrap svc">
+        <figure class="svc__fig" data-v-reveal="left" data-v-reveal-at="0.1 0.5">
+          <img src="assets/usl-udalenie.webp" alt="Кабинет, подготовленный к удалению: кресло откинуто, хирургический набор в запечатанных пакетах" width="1200" height="800" loading="lazy" decoding="async">
+          <figcaption>Хирургический приём</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="70">
+          <span class="svc__no">04</span>
+          <h2>Удаление зубов</h2>
+          <p class="svc__lead">Простое и сложное, включая зубы мудрости. Сначала снимок – он показывает, где проходят каналы и нервы. Анестезия, удаление, рекомендации письменно и контрольный осмотр.</p>
+          <ul class="svc__inc">
+            <li>Снимок до удаления <span>смотрим его вместе на экране</span></li>
+            <li>Анестезия <span>проверяем чувствительность перед началом</span></li>
+            <li>Рекомендации письменно <span>что делать вечером, что нельзя, когда прийти на осмотр</span></li>
+          </ul>
+          <div class="svc__foot">
+            <span class="svc__sum">от 2&nbsp;500&nbsp;₽<small>сложное – цена после снимка, до начала</small></span>
+            <a class="v-btn v-btn--ghost" href="kontakty.html#zapis">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v-section" data-v-act="flow" data-v-drift="#efece7" aria-label="Правило клиники">
+      <div class="v-wrap rule" data-v-in data-v-stagger="70">
+        <p>Ничего не начинаем без вашего решения</p>
+        <small>Это правило кабинета. Если в кресле нашли что-то ещё – останавливаемся, показываем и спрашиваем.</small>
+      </div>
+    </section>
+
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f6f4f1" id="implantatsiya" aria-label="Имплантация">
+      <div class="v-wrap svc">
+        <figure class="svc__fig" data-v-reveal="left" data-v-reveal-at="0.1 0.5">
+          <img src="assets/usl-implant.webp" alt="Модель нижней челюсти с титановым имплантатом и керамической коронкой на столе кабинета" width="1200" height="800" loading="lazy" decoding="async">
+          <figcaption>План имплантации</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="70">
+          <span class="svc__no">05</span>
+          <h2>Имплантация</h2>
+          <p class="svc__lead">От снимка до коронки на импланте. КТ показывает, где есть кость и где её не хватает. Этапы, сроки и цена каждого этапа записаны в плане до начала – вы всегда знаете, что дальше и за сколько.</p>
+          <ul class="svc__inc">
+            <li>КТ и план <span>смотрим объём кости, обсуждаем варианты</span></li>
+            <li>Установка импланта <span>один визит, анестезия, рекомендации письменно</span></li>
+            <li>Коронка на импланте <span>срок изготовления в плане, обычно несколько месяцев после приживления</span></li>
+          </ul>
+          <div class="svc__foot">
+            <span class="svc__sum">от 25&nbsp;000&nbsp;₽<small>за этап, точная цена – в плане</small></span>
+            <a class="v-btn v-btn--ghost" href="kontakty.html#zapis">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#efece7" id="koronki" aria-label="Коронки, виниры, мосты">
+      <div class="v-wrap svc">
+        <figure class="svc__fig" data-v-reveal="left" data-v-reveal-at="0.1 0.5">
+          <img src="assets/usl-koronki.webp" alt="Керамические коронки и винир на белом блюдце у окна" width="1200" height="800" loading="lazy" decoding="async">
+          <figcaption>Керамика подбирается под цвет зубов</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="70">
+          <span class="svc__no">06</span>
+          <h2>Коронки, виниры, мосты</h2>
+          <p class="svc__lead">Материал подбираем под зуб и бюджет: показываем варианты с ценами и объясняем разницу. Цвет согласуем до изготовления. На время изготовления ставим временную коронку, чтобы вы не ходили с обточенным зубом.</p>
+          <ul class="svc__inc">
+            <li>Подготовка и слепок <span>или скан – точность посадки</span></li>
+            <li>Временная коронка <span>сразу после обточки, на всё время изготовления</span></li>
+            <li>Примерка и фиксация <span>проверяем прикус и цвет вместе с вами</span></li>
+          </ul>
+          <div class="svc__foot">
+            <span class="svc__sum">от 12&nbsp;000&nbsp;₽<small>за единицу</small></span>
+            <a class="v-btn v-btn--ghost" href="kontakty.html#zapis">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f6f4f1" id="ortodontiya" aria-label="Брекеты и элайнеры">
+      <div class="v-wrap svc">
+        <figure class="svc__fig" data-v-reveal="left" data-v-reveal-at="0.1 0.5">
+          <img src="assets/usl-orto.webp" alt="Рука врача в перчатке держит прозрачный элайнер на фоне кресла" width="1200" height="800" loading="lazy" decoding="async">
+          <figcaption>Элайнер почти незаметен</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="70">
+          <span class="svc__no">07</span>
+          <h2>Брекеты и элайнеры</h2>
+          <p class="svc__lead">Консультация ортодонта, план по этапам и цена всего лечения – до установки. Обсудим, что подойдёт именно вам: иногда брекеты решают задачу быстрее, иногда элайнеры удобнее по режиму жизни.</p>
+          <ul class="svc__inc">
+            <li>Консультация и диагностика <span>снимки, фото, разбор ситуации</span></li>
+            <li>План лечения с ценой <span>сколько этапов, сколько визитов, за сколько</span></li>
+            <li>Контрольные визиты <span>регулировки и проверка движения зубов</span></li>
+          </ul>
+          <div class="svc__foot">
+            <span class="svc__sum">от 30&nbsp;000&nbsp;₽<small>за лечение, цена до установки</small></span>
+            <a class="v-btn v-btn--ghost" href="kontakty.html#zapis">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#efece7" id="detskaya" aria-label="Детская стоматология">
+      <div class="v-wrap svc">
+        <figure class="svc__fig" data-v-reveal="left" data-v-reveal-at="0.1 0.5">
+          <img src="assets/usl-deti.webp" alt="Детский уголок кабинета: игрушки на полке, мягкая игрушка на кресле, круглый ковёр" width="1200" height="800" loading="lazy" decoding="async">
+          <figcaption>Первый визит – знакомство</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="70">
+          <span class="svc__no">08</span>
+          <h2>Детская стоматология</h2>
+          <p class="svc__lead">Принимаем с четырёх лет. Первый визит ребёнка – знакомство с кабинетом: посидеть в кресле, посмотреть инструменты, пощёлкать кнопкой. Лечение – со второго визита и только с согласия ребёнка.</p>
+          <ul class="svc__inc">
+            <li>Приём без спешки <span>время на знакомство, а не только на лечение</span></li>
+            <li>Лечение молочных зубов <span>пломбы, серебрение, герметизация фиссур</span></li>
+            <li>Родители рядом <span>можно держать ребёнка за руку весь приём</span></li>
+          </ul>
+          <div class="svc__foot">
+            <span class="svc__sum">от 1&nbsp;500&nbsp;₽<small>первый осмотр – бесплатно</small></span>
+            <a class="v-btn v-btn--ghost" href="kontakty.html#zapis">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ДЕЙСТВИЕ -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f6f4f1" aria-label="Записаться">
+      <div class="v-wrap">
+        <div class="close" data-v-spotlight>
+          <div class="close__inner">
+            <div data-v-in data-v-stagger="70">
+              <span class="v-label">Не нашли своё?</span>
+              <h2 class="v-display v-display--xl">Начните с осмотра</h2>
+              <p>Врач посмотрит, объяснит и напишет план с ценой по пунктам. Решение – за вами, можно уйти просто с планом в руках.</p>
+              <div class="close__btns">
+                <a class="v-btn" href="kontakty.html#zapis" data-v-magnet="0.22" data-v-rise="0">Записаться</a>
+                <a class="v-btn v-btn--ghost" href="tseny.html">Смотреть цены</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Ясно · стоматология · Казань</span>
+    <span class="foot__more">ООО «Ясно» · ИНН 1655123456</span>
+    <span>Лицензия ЛО-16-01-003421 от 12.03.2019</span>
+    <span class="foot__warn">Имеются противопоказания. Необходима консультация специалиста.</span>
+  </footer>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  Vibe.mount(document.querySelector('.v-page'));
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+</script>
+</body>
+</html>

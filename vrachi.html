@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Врачи · Ясно, стоматология в Казани</title>
+<meta name="description" content="Врачи стоматологии «Ясно» в Казани: терапевт и ортодонт. Имена, специализация и образование – как в документах. Один врач ведёт пациента от плана до конца лечения.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Manrope:wght@400;500;600&display=block" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%274%27 y=%274%27 width=%2724%27 height=%2724%27 rx=%2710%27 fill=%27%233a3740%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%275%27 fill=%27%23f6f4f1%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  .v-page {
+    --v-canvas: #f6f4f1; --v-surface: #ffffff;
+    --v-ink: #26242a; --v-ink-soft: #5f5a62;
+    --v-accent: #3a3740; --v-accent-ink: #f8f6f3;
+    --v-accent-deep: #5b5560;
+    --v-font-display: "Rubik", "Arial Rounded MT Bold", system-ui, sans-serif;
+    --v-font-text: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 500;
+    --v-track-tight: -0.02em;
+    --v-shadow-color: 45 40 44;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .06), 0 8px 22px rgb(var(--v-shadow-color) / .08);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .08), 0 22px 54px rgb(var(--v-shadow-color) / .14);
+    --v-radius: 16px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --v-section: clamp(3.5rem, 8vw, 7rem);
+  }
+  html, body { margin: 0; background: #f6f4f1; }
+  .v-page .v-lede { font-weight: 400; }
+  .v-page .v-label { font-weight: 600; }
+  .v-page .v-btn { font-size: var(--v-t-sm); }
+
+  /* шапка */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter);
+    background: rgb(246 244 241 / 0); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(246 244 241 / .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); letter-spacing: -0.01em; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; min-height: 44px; white-space: nowrap; }
+  .bar__mark i { width: .8em; height: .8em; border-radius: .3em; background: var(--v-accent); display: inline-block; position: relative; flex: none; }
+  .bar__mark i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 34%; height: 34%; margin: -17% 0 0 -17%; border-radius: 50%; background: var(--v-canvas); }
+  .qnav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+  .qnav a { text-decoration: none; color: var(--v-ink-soft); display: inline-flex; align-items: center; gap: .4em; min-height: 44px; transition: color .16s var(--v-ease-out); }
+  .qnav a[aria-current="page"] { color: var(--v-ink); box-shadow: inset 0 -2px 0 var(--v-accent); }
+  @media (hover: hover) and (pointer: fine) { .qnav a:hover { color: var(--v-ink); } }
+  .bar__right { display: flex; align-items: center; gap: var(--v-4); }
+  .bar__tel { text-decoration: none; font-weight: 600; font-size: var(--v-t-sm); color: var(--v-ink); display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-2); white-space: nowrap; }
+  .bar .v-btn { padding: .7em 1.3em; }
+  @media (max-width: 1100px) { .qnav { display: none; } }
+  @media (max-width: 700px) {
+    .bar__tel { display: none; }
+    .bar__mark { font-size: 1.1rem; }
+    .bar .v-btn { padding: 0 1em; min-height: 44px; }
+    .bar__right { gap: var(--v-2); }
+  }
+
+  /* заголовок страницы */
+  .pagehead { padding-top: clamp(7rem, 16vh, 10rem); }
+  .pagehead .v-label { display: block; margin-bottom: var(--v-4); color: var(--v-accent-deep); }
+  .pagehead .v-display { font-size: clamp(2rem, 1.2rem + 2.6vw, 3.4rem); max-width: 20ch; }
+  .pagehead p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 56ch; font-size: var(--v-t-md, 1.125rem); text-wrap: pretty; }
+
+  /* карточки врачей: фото меняется по клику */
+  .who__head { max-width: 44rem; }
+  .who__head .v-label { display: block; margin-bottom: var(--v-5); }
+  .who__head p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 46ch; text-wrap: pretty; }
+  .who { margin-top: var(--v-7); display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--v-8) var(--v-9); align-items: start; }
+  .who__fig { position: relative; aspect-ratio: 3 / 4; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); background: var(--v-surface); max-width: 24rem; }
+  .who__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .v-page .who__ph { position: absolute; inset: 0; transition: opacity .6s var(--v-ease-out), transform .9s var(--v-ease-out); }
+  .v-page .who__ph--2 { opacity: 0; transform: scale(1.04); }
+  .who[data-doc="2"] .who__ph--1 { opacity: 0; transform: scale(1.04); }
+  .who[data-doc="2"] .who__ph--2 { opacity: 1; transform: none; }
+  .who__fig figcaption { position: absolute; left: var(--v-5); right: var(--v-5); top: var(--v-5); font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 24ch; }
+  .docs { display: grid; gap: var(--v-5); }
+  .docs > .doc { transform: none; transition: opacity .62s var(--v-ease-out); }
+  .doc { display: grid; gap: var(--v-2); padding: var(--v-6); border-radius: var(--v-radius); background: var(--v-surface); box-shadow: var(--v-e1); }
+  .doc[role="button"] { position: relative; cursor: pointer; transition: box-shadow .35s var(--v-ease-out), opacity .35s var(--v-ease-out); }
+  .doc[role="button"]:not(.is-on) { opacity: .72; }
+  .doc[role="button"].is-on { box-shadow: inset 3px 0 0 var(--v-accent), var(--v-e1); }
+  .doc[role="button"]:focus-visible { outline: 2px solid var(--v-accent); outline-offset: 3px; }
+  @media (hover: hover) { .doc[role="button"]:not(.is-on):hover { opacity: 1; } }
+  .docs > .docs__hint { font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); }
+  .doc--lead { padding: var(--v-7) var(--v-7) var(--v-6); }
+  .doc b { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-xl); letter-spacing: -0.015em; line-height: 1.1; }
+  .doc--lead b { font-size: var(--v-t-2xl); }
+  .doc .spec { color: var(--v-ink); }
+  .doc .edu { color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  .doc .says { margin-top: var(--v-3); padding-top: var(--v-3); border-top: 1px solid var(--v-hair); font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 40ch; text-wrap: pretty; }
+
+  /* факты списком */
+  .facts { list-style: none; margin: 0; padding: 0; }
+  .facts li { padding: var(--v-4) 0; border-top: 1px solid var(--v-hair); display: grid; gap: var(--v-1); }
+  .facts li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .facts b { font-weight: 600; }
+  .facts span { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 44ch; }
+
+  /* стерильность */
+  .clean { margin-top: var(--v-8); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--v-8) var(--v-9); align-items: center; }
+  .clean__fig { position: relative; aspect-ratio: 16 / 10; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); background: var(--v-surface); }
+  .clean__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .clean__fig figcaption { position: absolute; left: var(--v-5); top: var(--v-5); right: 50%; font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .clean__copy h3 { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-xl); letter-spacing: -0.015em; line-height: 1.1; margin-bottom: var(--v-5); }
+  @media (max-width: 860px) {
+    .clean { grid-template-columns: 1fr; gap: var(--v-6); margin-top: var(--v-7); }
+    .clean__fig { aspect-ratio: 16 / 11; }
+    .clean__fig figcaption { right: var(--v-5); }
+  }
+
+  /* «один врач ведёт от плана до конца» */
+  .lead2 { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--v-8) var(--v-9); align-items: center; }
+  .lead2__fig { position: relative; aspect-ratio: 3 / 2; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); background: var(--v-surface); }
+  .lead2__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .lead2__fig figcaption { position: absolute; left: var(--v-5); bottom: var(--v-4); font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); background: rgb(255 255 255 / .82); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); padding: .35em .8em; border-radius: 999px; }
+  .lead2 h2 { font-family: var(--v-font-display); font-weight: 500; font-size: clamp(1.6rem, 1.1rem + 1.6vw, 2.3rem); letter-spacing: var(--v-track-tight); line-height: 1.08; text-wrap: balance; }
+  .lead2 p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 52ch; text-wrap: pretty; }
+  .lead2 .facts { margin-top: var(--v-5); }
+  @media (max-width: 860px) {
+    .lead2 { grid-template-columns: 1fr; gap: var(--v-5); }
+  }
+  @media (max-width: 860px) {
+    .who { grid-template-columns: 1fr; gap: var(--v-6); margin-top: var(--v-7); }
+    .who__fig { max-width: 20rem; aspect-ratio: 4 / 5; }
+    .doc { padding: var(--v-5); }
+    .doc--lead { padding: var(--v-6) var(--v-5); }
+  }
+
+  /* финал */
+  .close { position: relative; z-index: 3; display: grid; grid-template-rows: 1fr auto; padding: 0 var(--v-gutter);
+    background: radial-gradient(60rem 40rem at calc(var(--v-mx, .7) * 100%) calc(var(--v-my, .4) * 100%), rgb(58 55 64 / .1), transparent 60%); }
+  .close__inner { align-self: center; max-width: 46rem; padding-top: var(--v-9); }
+  .close__inner .v-label { display: block; margin-bottom: var(--v-5); }
+  .close__inner .v-display { font-size: var(--v-t-3xl); line-height: 1; max-width: 14ch; }
+  .close__inner p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 40ch; text-wrap: pretty; }
+  .close__btns { margin-top: var(--v-6); display: flex; flex-wrap: wrap; gap: var(--v-3); }
+  .foot { display: grid; grid-template-columns: auto 1fr auto; gap: var(--v-4) var(--v-6); align-items: baseline; padding: var(--v-6) var(--v-gutter); border-top: 1px solid var(--v-hair);
+    background: rgb(246 244 241 / .84); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .foot__warn { grid-column: 1 / -1; color: var(--v-ink); font-weight: 600; letter-spacing: .01em; }
+  @media (max-width: 860px) {
+    .close__inner .v-display { font-size: var(--v-t-2xl); max-width: none; }
+    .foot { grid-template-columns: 1fr; gap: var(--v-2); font-size: var(--v-t-sm); padding: var(--v-5) var(--v-gutter) calc(var(--v-5) + env(safe-area-inset-bottom)); }
+    .foot__more { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="index.html"><i aria-hidden="true"></i>Ясно</a>
+    <nav class="qnav" aria-label="Разделы сайта">
+      <a href="uslugi.html">Услуги</a>
+      <a href="tseny.html">Цены</a>
+      <a href="vrachi.html" aria-current="page">Врачи</a>
+      <a href="o-klinike.html">О клинике</a>
+      <a href="kontakty.html">Контакты</a>
+    </nav>
+    <div class="bar__right">
+      <a class="bar__tel" href="tel:+78432070000">+7 (843) 207-00-00</a>
+      <a class="v-btn" href="kontakty.html#zapis">Записаться</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="v-section pagehead" data-v-act="flow" data-v-drift="#f6f4f1" aria-label="Врачи клиники">
+      <div class="v-wrap">
+        <div data-v-in data-v-stagger="70">
+          <span class="v-label">Врачи</span>
+          <h1 class="v-display">Кто будет лечить</h1>
+          <p>Небольшая клиника: два врача, которых вы видите на фото и с которыми разговариваете до кресла. Никаких «лучших в городе» и выдуманного стажа – только то, что написано в документах.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#efece7" aria-label="Карточки врачей">
+      <div class="v-wrap">
+        <div class="who" id="who" data-doc="1">
+          <figure class="who__fig" data-v-reveal="up" data-v-reveal-at="0.12 0.5">
+            <img class="who__ph who__ph--1" src="assets/doctor.webp" alt="Врач у кресла в светлом кабинете, лицом к пациенту, спокойная улыбка" width="1200" height="1600" loading="lazy" decoding="async">
+            <img class="who__ph who__ph--2" src="assets/doctor-2.webp" alt="Второй врач клиники у кресла в том же светлом кабинете, смотрит в камеру" width="1200" height="1600" loading="lazy" decoding="async">
+            <figcaption>Нажмите на карточку – покажем фото этого врача</figcaption>
+          </figure>
+          <div class="docs" data-v-in data-v-stagger="90">
+            <article class="doc doc--lead is-on" data-v-tilt="4" data-doc="1" role="button" tabindex="0" aria-pressed="true" aria-controls="who">
+              <b>Галина Смирнова</b>
+              <span class="spec">стоматолог-терапевт</span>
+              <span class="edu">Казанский государственный медицинский университет, 2009</span>
+              <p class="says">Перед приёмом объясняет план и цену, во время – каждое действие. Вопрос «зачем это» здесь нормальный, а не неудобный.</p>
+            </article>
+            <article class="doc" data-v-tilt="4" data-doc="2" role="button" tabindex="0" aria-pressed="false" aria-controls="who">
+              <b>Елена Волкова</b>
+              <span class="spec">врач-ортодонт</span>
+              <span class="edu">Казанский государственный медицинский университет, 2012</span>
+              <p class="says">Показывает снимки и фото зубов, рассказывает варианты решения с ценами до начала. Лечит пациентов от четырнадцати лет.</p>
+            </article>
+            <p class="docs__hint" aria-hidden="true">Специализация и образование – как в документах врачей</p>
+          </div>
+        </div>
+        <div class="clean">
+          <figure class="clean__fig" data-v-reveal="left" data-v-reveal-at="0.12 0.5">
+            <img src="assets/steril.webp" alt="Стерилизационная: автоклав с открытой дверцей, инструменты в запечатанных пакетах на полке и столе" width="1600" height="900" loading="lazy" decoding="async">
+            <figcaption>После каждого пациента инструменты проходят автоклав</figcaption>
+          </figure>
+          <div class="clean__copy" data-v-in data-v-stagger="70">
+            <h3>Чем лечим и как это стерильно</h3>
+            <ul class="facts">
+              <li><b>Инструменты в пакетах, вскрываем при вас</b><span>Каждый набор запечатан после автоклава и открывается уже у кресла</span></li>
+              <li><b>Одноразовое – на каждый приём</b><span>Слюноотсос, салфетки, стаканы, перчатки, маска. После вас – в утилизацию</span></li>
+              <li><b>Снимок смотрим вместе</b><span>На экране, с пояснениями, где что. Снимок остаётся у вас в мессенджере вместе с планом</span></li>
+              <li><b>План и цена письменно</b><span>Бумага или сообщение: что делаем, в каком порядке, за сколько. Это и есть договорённость</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v-section" data-v-act="flow" data-v-drift="#f6f4f1" aria-label="Один врач от плана до конца">
+      <div class="v-wrap lead2">
+        <figure class="lead2__fig" data-v-reveal="left" data-v-reveal-at="0.12 0.5">
+          <img src="assets/workplace.webp" alt="Рабочее место врача: монитор со снимком зуба рядом с креслом, микроскоп в кадре" width="1200" height="800" loading="lazy" decoding="async">
+          <figcaption>Кабинет терапевта</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="70">
+          <h2>Один врач ведёт от плана до конца</h2>
+          <p>Вы знаете, кто будет лечить, ещё до кресла: врач пишет план, лечит и проверяет результат. Не передаёт «на этап» между кабинетами и не объясняет заново на каждом визите.</p>
+          <ul class="facts">
+            <li><b>План пишет тот, кто лечит</b><span>Никаких «сейчас передадим коллеге»: ваш врач знает вашу историю от начала</span></li>
+            <li><b>Тот же врач на каждом визите</b><span>Кроме отпусков и больничных – об этом предупреждаем заранее, а не в день приёма</span></li>
+            <li><b>Финал проверяет тот же врач</b><span>Прикус, цвет, ощущения – контрольный осмотр у лечащего врача, а не «у кого получилось»</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ДЕЙСТВИЕ -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#efece7" aria-label="Записаться">
+      <div class="v-wrap">
+        <div class="close" data-v-spotlight>
+          <div class="close__inner">
+            <div data-v-in data-v-stagger="70">
+              <span class="v-label">Познакомьтесь вживую</span>
+              <h2 class="v-display v-display--xl">Приходите просто посмотреть</h2>
+              <p>Первый визит – осмотр и разговор: план и цена письменно, лечить начинаем только после вашего решения.</p>
+              <div class="close__btns">
+                <a class="v-btn" href="kontakty.html#zapis" data-v-magnet="0.22" data-v-rise="0">Записаться</a>
+                <a class="v-btn v-btn--ghost" href="tseny.html">Смотреть цены</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Ясно · стоматология · Казань</span>
+    <span class="foot__more">ООО «Ясно» · ИНН 1655123456</span>
+    <span>Лицензия ЛО-16-01-003421 от 12.03.2019</span>
+    <span class="foot__warn">Имеются противопоказания. Необходима консультация специалиста.</span>
+  </footer>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  Vibe.mount(document.querySelector('.v-page'));
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Врачи: клик (или Enter / пробел) по карточке показывает слева фото этого врача.
+  (function () {
+    var who = document.getElementById('who'); if (!who) return;
+    var cards = who.querySelectorAll('.doc[data-doc]');
+    function pick(card) {
+      who.setAttribute('data-doc', card.getAttribute('data-doc'));
+      cards.forEach(function (c) { var on = c === card; c.classList.toggle('is-on', on); c.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    }
+    var fig = who.querySelector('.who__fig');
+    function show() { // на телефоне фото стоит выше карточек: подводим его в экран
+      if (!fig || !window.matchMedia('(max-width: 860px)').matches) return;
+      var r = fig.getBoundingClientRect(); if (r.top < 70 || r.bottom > window.innerHeight) fig.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    cards.forEach(function (c) {
+      c.addEventListener('click', function () { pick(c); show(); });
+      c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(c); } });
+    });
+  })();
+</script>
+</body>
+</html>

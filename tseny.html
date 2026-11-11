@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Цены · Ясно, стоматология в Казани</title>
+<meta name="description" content="Цены стоматологии «Ясно» в Казани: осмотр и план 900 ₽, гигиена 4 500 ₽, лечение кариеса от 3 500 ₽, удаление от 2 500 ₽, коронка от 12 000 ₽. Цена в плане итоговая, до начала лечения.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Manrope:wght@400;500;600&display=block" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%274%27 y=%274%27 width=%2724%27 height=%2724%27 rx=%2710%27 fill=%27%233a3740%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%275%27 fill=%27%23f6f4f1%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  .v-page {
+    --v-canvas: #f6f4f1; --v-surface: #ffffff;
+    --v-ink: #26242a; --v-ink-soft: #5f5a62;
+    --v-accent: #3a3740; --v-accent-ink: #f8f6f3;
+    --v-accent-deep: #5b5560;
+    --v-font-display: "Rubik", "Arial Rounded MT Bold", system-ui, sans-serif;
+    --v-font-text: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 500;
+    --v-track-tight: -0.02em;
+    --v-shadow-color: 45 40 44;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .06), 0 8px 22px rgb(var(--v-shadow-color) / .08);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .08), 0 22px 54px rgb(var(--v-shadow-color) / .14);
+    --v-radius: 16px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --v-section: clamp(3.5rem, 8vw, 7rem);
+  }
+  html, body { margin: 0; background: #f6f4f1; }
+  .v-page .v-lede { font-weight: 400; }
+  .v-page .v-label { font-weight: 600; }
+  .v-page .v-btn { font-size: var(--v-t-sm); }
+
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter);
+    background: rgb(246 244 241 / 0); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(246 244 241 / .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); letter-spacing: -0.01em; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; min-height: 44px; white-space: nowrap; }
+  .bar__mark i { width: .8em; height: .8em; border-radius: .3em; background: var(--v-accent); display: inline-block; position: relative; flex: none; }
+  .bar__mark i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 34%; height: 34%; margin: -17% 0 0 -17%; border-radius: 50%; background: var(--v-canvas); }
+  .qnav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+  .qnav a { text-decoration: none; color: var(--v-ink-soft); display: inline-flex; align-items: center; gap: .4em; min-height: 44px; transition: color .16s var(--v-ease-out); }
+  .qnav a[aria-current="page"] { color: var(--v-ink); box-shadow: inset 0 -2px 0 var(--v-accent); }
+  @media (hover: hover) and (pointer: fine) { .qnav a:hover { color: var(--v-ink); } }
+  .bar__right { display: flex; align-items: center; gap: var(--v-4); }
+  .bar__tel { text-decoration: none; font-weight: 600; font-size: var(--v-t-sm); color: var(--v-ink); display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-2); white-space: nowrap; }
+  .bar .v-btn { padding: .7em 1.3em; }
+  @media (max-width: 1100px) { .qnav { display: none; } }
+  @media (max-width: 700px) {
+    .bar__tel { display: none; }
+    .bar__mark { font-size: 1.1rem; }
+    .bar .v-btn { padding: 0 1em; min-height: 44px; }
+    .bar__right { gap: var(--v-2); }
+  }
+
+  /* ---- пин с формулой ---- */
+  .price { height: 100%; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--v-8); align-items: center; padding: 5rem var(--v-gutter) var(--v-6); }
+  .price__copy { position: relative; align-self: center; }
+  .price__head .v-label { display: block; margin-bottom: var(--v-5); }
+  .price__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 40ch; text-wrap: pretty; }
+  .price__stack { position: relative; margin-top: var(--v-7); min-height: 13rem; }
+  .price__item { position: absolute; left: 0; right: 0; top: 0; display: grid; gap: var(--v-2); max-width: 40rem; }
+  .price__item h3 { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-xl); letter-spacing: -0.015em; line-height: 1.08; display: flex; flex-wrap: wrap; align-items: baseline; gap: .2em .7em; }
+  .price__item h3 .sum { font-size: var(--v-t-lg); color: var(--v-accent-deep); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .price__item p { color: var(--v-ink-soft); max-width: 42ch; text-wrap: pretty; }
+  .price__item .where { display: inline-flex; align-items: center; gap: .5em; margin-top: var(--v-2); font-size: var(--v-t-sm); color: var(--v-ink); }
+  .price__item .where i { width: .6em; height: .6em; border-radius: 50%; background: var(--v-accent); flex: none; }
+  .chart { position: relative; justify-self: center; width: min(100%, 34rem); }
+  .chart__svg { width: 100%; height: auto; display: block; }
+  .chart__cap { margin-top: var(--v-3); display: flex; justify-content: space-between; gap: var(--v-4); font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); }
+  .t__base { fill: var(--v-surface); stroke: var(--v-hair-strong); stroke-width: 1.2; transition: opacity .5s var(--v-ease-out), stroke-dasharray .5s; }
+  .t__hi { fill: var(--v-accent); opacity: 0; transition: opacity .55s var(--v-ease-out); transition-delay: calc(var(--i, 0) * 28ms); }
+  .chart.is-s1 .t__hi { opacity: .34; }
+  .chart.is-s2 .t[data-n="36"] .t__hi { opacity: .95; }
+  .chart.is-s3 .t[data-n="26"] .t__base { opacity: .28; stroke-dasharray: 4 4; }
+  .chart.is-s4 .t[data-n="46"] .t__hi { opacity: 1; }
+  .chart.is-s4 .t[data-n="46"] .t__base { stroke: var(--v-accent-deep); }
+  .chart .ring { position: absolute; width: 11%; aspect-ratio: 1; border-radius: 50%; box-shadow: 0 0 0 2px var(--v-accent); opacity: 0; transition: opacity .4s var(--v-ease-out), transform .6s var(--v-ease-out); pointer-events: none; transform: translate(-50%, -50%); }
+  .chart.is-s2 .ring, .chart.is-s3 .ring, .chart.is-s4 .ring { opacity: 1; }
+  @media (max-width: 860px) {
+    .price { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); gap: var(--v-4); align-items: start; padding: 4.6rem var(--v-gutter) var(--v-5); }
+    .chart { width: min(100%, 22rem); max-height: 38svh; order: -1; justify-self: start; }
+    .chart__svg { max-height: 33svh; width: auto; margin-inline: auto; }
+    .chart__cap { margin-top: var(--v-2); }
+    .price__head .v-label { margin-bottom: var(--v-2); }
+    .price__head p { display: none; }
+    .price__stack { margin-top: var(--v-4); min-height: 12rem; }
+    .price__item h3 { font-size: var(--v-t-lg); }
+    .price__item p { font-size: var(--v-t-sm); max-width: none; }
+  }
+  @media (max-width: 860px) and (max-height: 720px) { .chart__svg { max-height: 28svh; } .price__item p { display: none; } }
+
+  /* ---- полный прайс ---- */
+  .pricelist { max-width: 60rem; }
+  .pricelist .v-label { display: block; margin-bottom: var(--v-3); color: var(--v-accent-deep); }
+  .pricelist table { width: 100%; border-collapse: collapse; margin-bottom: var(--v-8); }
+  .pricelist caption { text-align: left; font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-xl); letter-spacing: -0.015em; margin-bottom: var(--v-4); }
+  .pricelist td { padding: var(--v-4) 0; border-top: 1px solid var(--v-hair); vertical-align: baseline; }
+  .pricelist tr:last-child td { border-bottom: 1px solid var(--v-hair); }
+  .pricelist td:first-child { color: var(--v-ink); padding-right: var(--v-5); }
+  .pricelist td:last-child { text-align: right; font-family: var(--v-font-display); font-weight: 500; color: var(--v-accent-deep); white-space: nowrap; font-variant-numeric: tabular-nums; padding-left: var(--v-5); }
+  .pricelist .note { color: var(--v-ink-soft); font-size: var(--v-t-sm); margin-top: calc(-1 * var(--v-6)); margin-bottom: var(--v-8); max-width: 56ch); }
+  .turn { margin-top: var(--v-7); padding: var(--v-5) var(--v-6); border-radius: var(--v-radius); background: var(--v-surface); box-shadow: var(--v-e1); display: grid; gap: var(--v-3); max-width: 44rem; }
+  .turn .v-label { color: var(--v-accent-deep); }
+  .turn p { font-size: var(--v-t-lg); line-height: 1.35; text-wrap: pretty; }
+  .turn small { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  @media (max-width: 600px) { .pricelist td { font-size: var(--v-t-sm); } }
+
+  /* финал */
+  .close { position: relative; z-index: 3; display: grid; grid-template-rows: 1fr auto; padding: 0 var(--v-gutter);
+    background: radial-gradient(60rem 40rem at calc(var(--v-mx, .7) * 100%) calc(var(--v-my, .4) * 100%), rgb(58 55 64 / .1), transparent 60%); }
+  .close__inner { align-self: center; max-width: 46rem; padding-top: var(--v-9); }
+  .close__inner .v-label { display: block; margin-bottom: var(--v-5); }
+  .close__inner .v-display { font-size: var(--v-t-3xl); line-height: 1; max-width: 14ch; }
+  .close__inner p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 40ch; text-wrap: pretty; }
+  .close__btns { margin-top: var(--v-6); display: flex; flex-wrap: wrap; gap: var(--v-3); }
+  .foot { display: grid; grid-template-columns: auto 1fr auto; gap: var(--v-4) var(--v-6); align-items: baseline; padding: var(--v-6) var(--v-gutter); border-top: 1px solid var(--v-hair);
+    background: rgb(246 244 241 / .84); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .foot__warn { grid-column: 1 / -1; color: var(--v-ink); font-weight: 600; letter-spacing: .01em; }
+  @media (max-width: 860px) {
+    .close__inner .v-display { font-size: var(--v-t-2xl); max-width: none; }
+    .foot { grid-template-columns: 1fr; gap: var(--v-2); font-size: var(--v-t-sm); padding: var(--v-5) var(--v-gutter) calc(var(--v-5) + env(safe-area-inset-bottom)); }
+    .foot__more { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="index.html"><i aria-hidden="true"></i>Ясно</a>
+    <nav class="qnav" aria-label="Разделы сайта">
+      <a href="uslugi.html">Услуги</a>
+      <a href="tseny.html" aria-current="page">Цены</a>
+      <a href="vrachi.html">Врачи</a>
+      <a href="o-klinike.html">О клинике</a>
+      <a href="kontakty.html">Контакты</a>
+    </nav>
+    <div class="bar__right">
+      <a class="bar__tel" href="tel:+78432070000">+7 (843) 207-00-00</a>
+      <a class="v-btn" href="kontakty.html#zapis">Записаться</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ПИН: зубная формула -->
+    <section id="ceny" data-v-act="pin" data-v-span="3.2" data-v-drift="#f6f4f1" aria-label="Цена в плане – итоговая">
+      <div data-v-stage>
+        <div class="price">
+          <div class="price__copy">
+            <div class="price__head" data-v-cue="0 1 0 0" data-v-rise="0">
+              <span class="v-label">Цены</span>
+              <h1 class="v-display v-display--lg">Цена в плане – итоговая</h1>
+              <p>По каждому пункту плана, до начала. Если в кресле нашли что-то ещё – останавливаемся, показываем и спрашиваем, делать ли.</p>
+            </div>
+            <div class="price__stack">
+              <div class="price__item" data-v-cue="0 0.22 0 0.04">
+                <h3>Осмотр и план <span class="sum v-nums">900&nbsp;₽</span></h3>
+                <p>Осмотр, снимок при необходимости, план лечения письменно с ценой по пунктам.</p>
+                <span class="where"><i aria-hidden="true"></i>На формуле: все зубы, план пишем по каждому</span>
+              </div>
+              <div class="price__item" data-v-cue="0.2 0.42 0.04 0.04">
+                <h3>Гигиена <span class="sum v-nums">4&nbsp;500&nbsp;₽</span></h3>
+                <p>Ультразвук, порошок, полировка, рекомендации по щётке и пасте. Один визит, около часа.</p>
+                <span class="where"><i aria-hidden="true"></i>На формуле: вся формула целиком</span>
+              </div>
+              <div class="price__item" data-v-cue="0.4 0.62 0.04 0.04">
+                <h3>Лечение кариеса <span class="sum v-nums">от 3&nbsp;500&nbsp;₽</span></h3>
+                <p>Анестезия, пломба, полировка по прикусу. Один визит. Точная цена – в плане после осмотра, до начала.</p>
+                <span class="where"><i aria-hidden="true"></i>На формуле: зуб 3.6, один визит</span>
+              </div>
+              <div class="price__item" data-v-cue="0.6 0.82 0.04 0.04">
+                <h3>Удаление <span class="sum v-nums">от 2&nbsp;500&nbsp;₽</span></h3>
+                <p>Анестезия, удаление, рекомендации письменно. Сложное удаление – цена после снимка и тоже до начала.</p>
+                <span class="where"><i aria-hidden="true"></i>На формуле: зуб 2.6</span>
+              </div>
+              <div class="price__item" data-v-cue="0.8 1 0.04 0">
+                <h3>Коронка <span class="sum v-nums">от 12&nbsp;000&nbsp;₽</span></h3>
+                <p>Подготовка, слепок или скан, временная коронка на время изготовления. Срок изготовления пишем в план.</p>
+                <span class="where"><i aria-hidden="true"></i>На формуле: зуб 4.6</span>
+              </div>
+            </div>
+          </div>
+          <div class="chart" id="chart" aria-hidden="false">
+            <svg class="chart__svg" viewBox="0 0 600 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Зубная формула: верхняя и нижняя дуги">
+<g class="arch arch--up">
+<g class="t t--m" data-n="17" style="--i:0"><rect class="t__base" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(91.1 225.2) rotate(-56.1)"/><rect class="t__hi" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(91.1 225.2) rotate(-56.1)"/></g>
+<g class="t t--m" data-n="16" style="--i:1"><rect class="t__base" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(123.2 181.1) rotate(-51.5)"/><rect class="t__hi" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(123.2 181.1) rotate(-51.5)"/></g>
+<g class="t t--p" data-n="15" style="--i:2"><rect class="t__base" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(155.4 144.4) rotate(-45.8)"/><rect class="t__hi" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(155.4 144.4) rotate(-45.8)"/></g>
+<g class="t t--p" data-n="14" style="--i:3"><rect class="t__base" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(187.5 115.0) rotate(-38.7)"/><rect class="t__hi" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(187.5 115.0) rotate(-38.7)"/></g>
+<g class="t t--c" data-n="13" style="--i:4"><rect class="t__base" x="-15" y="-21" width="30" height="42" rx="13" transform="translate(219.6 93.0) rotate(-29.7)"/><rect class="t__hi" x="-15" y="-21" width="30" height="42" rx="13" transform="translate(219.6 93.0) rotate(-29.7)"/></g>
+<g class="t t--i" data-n="12" style="--i:5"><rect class="t__base" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(251.8 78.3) rotate(-18.9)"/><rect class="t__hi" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(251.8 78.3) rotate(-18.9)"/></g>
+<g class="t t--i" data-n="11" style="--i:6"><rect class="t__base" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(283.9 70.9) rotate(-6.5)"/><rect class="t__hi" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(283.9 70.9) rotate(-6.5)"/></g>
+<g class="t t--i" data-n="21" style="--i:7"><rect class="t__base" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(316.1 70.9) rotate(6.5)"/><rect class="t__hi" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(316.1 70.9) rotate(6.5)"/></g>
+<g class="t t--i" data-n="22" style="--i:8"><rect class="t__base" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(348.2 78.3) rotate(18.9)"/><rect class="t__hi" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(348.2 78.3) rotate(18.9)"/></g>
+<g class="t t--c" data-n="23" style="--i:9"><rect class="t__base" x="-15" y="-21" width="30" height="42" rx="13" transform="translate(380.4 93.0) rotate(29.7)"/><rect class="t__hi" x="-15" y="-21" width="30" height="42" rx="13" transform="translate(380.4 93.0) rotate(29.7)"/></g>
+<g class="t t--p" data-n="24" style="--i:10"><rect class="t__base" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(412.5 115.0) rotate(38.7)"/><rect class="t__hi" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(412.5 115.0) rotate(38.7)"/></g>
+<g class="t t--p" data-n="25" style="--i:11"><rect class="t__base" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(444.6 144.4) rotate(45.8)"/><rect class="t__hi" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(444.6 144.4) rotate(45.8)"/></g>
+<g class="t t--m" data-n="26" style="--i:12"><rect class="t__base" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(476.8 181.1) rotate(51.5)"/><rect class="t__hi" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(476.8 181.1) rotate(51.5)"/></g>
+<g class="t t--m" data-n="27" style="--i:13"><rect class="t__base" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(508.9 225.2) rotate(56.1)"/><rect class="t__hi" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(508.9 225.2) rotate(56.1)"/></g>
+</g>
+<g class="arch arch--low">
+<g class="t t--m" data-n="47" style="--i:0"><rect class="t__base" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(91.1 334.8) rotate(56.1)"/><rect class="t__hi" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(91.1 334.8) rotate(56.1)"/></g>
+<g class="t t--m" data-n="46" style="--i:1"><rect class="t__base" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(123.2 378.9) rotate(51.5)"/><rect class="t__hi" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(123.2 378.9) rotate(51.5)"/></g>
+<g class="t t--p" data-n="45" style="--i:2"><rect class="t__base" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(155.4 415.6) rotate(45.8)"/><rect class="t__hi" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(155.4 415.6) rotate(45.8)"/></g>
+<g class="t t--p" data-n="44" style="--i:3"><rect class="t__base" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(187.5 445.0) rotate(38.7)"/><rect class="t__hi" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(187.5 445.0) rotate(38.7)"/></g>
+<g class="t t--c" data-n="43" style="--i:4"><rect class="t__base" x="-15" y="-21" width="30" height="42" rx="13" transform="translate(219.6 467.0) rotate(29.7)"/><rect class="t__hi" x="-15" y="-21" width="30" height="42" rx="13" transform="translate(219.6 467.0) rotate(29.7)"/></g>
+<g class="t t--i" data-n="42" style="--i:5"><rect class="t__base" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(251.8 481.7) rotate(18.9)"/><rect class="t__hi" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(251.8 481.7) rotate(18.9)"/></g>
+<g class="t t--i" data-n="41" style="--i:6"><rect class="t__base" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(283.9 489.1) rotate(6.5)"/><rect class="t__hi" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(283.9 489.1) rotate(6.5)"/></g>
+<g class="t t--i" data-n="31" style="--i:7"><rect class="t__base" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(316.1 489.1) rotate(-6.5)"/><rect class="t__hi" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(316.1 489.1) rotate(-6.5)"/></g>
+<g class="t t--i" data-n="32" style="--i:8"><rect class="t__base" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(348.2 481.7) rotate(-18.9)"/><rect class="t__hi" x="-14" y="-21" width="28" height="42" rx="9" transform="translate(348.2 481.7) rotate(-18.9)"/></g>
+<g class="t t--c" data-n="33" style="--i:9"><rect class="t__base" x="-15" y="-21" width="30" height="42" rx="13" transform="translate(380.4 467.0) rotate(-29.7)"/><rect class="t__hi" x="-15" y="-21" width="30" height="42" rx="13" transform="translate(380.4 467.0) rotate(-29.7)"/></g>
+<g class="t t--p" data-n="34" style="--i:10"><rect class="t__base" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(412.5 445.0) rotate(-38.7)"/><rect class="t__hi" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(412.5 445.0) rotate(-38.7)"/></g>
+<g class="t t--p" data-n="35" style="--i:11"><rect class="t__base" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(444.6 415.6) rotate(-45.8)"/><rect class="t__hi" x="-18" y="-18" width="36" height="36" rx="13" transform="translate(444.6 415.6) rotate(-45.8)"/></g>
+<g class="t t--m" data-n="36" style="--i:12"><rect class="t__base" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(476.8 378.9) rotate(-51.5)"/><rect class="t__hi" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(476.8 378.9) rotate(-51.5)"/></g>
+<g class="t t--m" data-n="37" style="--i:13"><rect class="t__base" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(508.9 334.8) rotate(-56.1)"/><rect class="t__hi" x="-23" y="-21" width="46" height="42" rx="13" transform="translate(508.9 334.8) rotate(-56.1)"/></g>
+</g>
+</svg>
+            <span class="ring" id="ring" aria-hidden="true"></span>
+            <div class="chart__cap"><span>Верхняя дуга</span><span id="chart-cap">Осмотр · весь ряд</span><span>Нижняя дуга</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОЛНЫЙ ПРАЙС -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#efece7" aria-label="Полный прайс">
+      <div class="v-wrap pricelist" data-v-in data-v-stagger="55">
+        <table>
+          <caption>Диагностика</caption>
+          <tr><td>Осмотр и план лечения письменно</td><td>900&nbsp;₽</td></tr>
+          <tr><td>Прицельный снимок</td><td>350&nbsp;₽</td></tr>
+          <tr><td>КТ одной челюсти</td><td>1&nbsp;800&nbsp;₽</td></tr>
+        </table>
+        <table>
+          <caption>Гигиена и профилактика</caption>
+          <tr><td>Профессиональная гигиена</td><td>4&nbsp;500&nbsp;₽</td></tr>
+          <tr><td>Герметизация фиссур (на зуб)</td><td>900&nbsp;₽</td></tr>
+        </table>
+        <table>
+          <caption>Терапия</caption>
+          <tr><td>Лечение кариеса (пломба)</td><td>от 3&nbsp;500&nbsp;₽</td></tr>
+          <tr><td>Лечение каналов (за визит)</td><td>от 5&nbsp;000&nbsp;₽</td></tr>
+          <tr><td>Реставрация зуба</td><td>от 4&nbsp;500&nbsp;₽</td></tr>
+        </table>
+        <table>
+          <caption>Хирургия</caption>
+          <tr><td>Удаление зуба</td><td>от 2&nbsp;500&nbsp;₽</td></tr>
+          <tr><td>Удаление зуба мудрости</td><td>от 5&nbsp;500&nbsp;₽</td></tr>
+          <tr><td>Установка импланта</td><td>от 25&nbsp;000&nbsp;₽</td></tr>
+        </table>
+        <table>
+          <caption>Ортопедия</caption>
+          <tr><td>Керамическая коронка</td><td>от 12&nbsp;000&nbsp;₽</td></tr>
+          <tr><td>Винир</td><td>от 18&nbsp;000&nbsp;₽</td></tr>
+          <tr><td>Временная коронка</td><td>1&nbsp;200&nbsp;₽</td></tr>
+        </table>
+        <table>
+          <caption>Ортодонтия</caption>
+          <tr><td>Консультация ортодонта</td><td>900&nbsp;₽</td></tr>
+          <tr><td>Брекет-система (за лечение)</td><td>от 30&nbsp;000&nbsp;₽</td></tr>
+          <tr><td>Элайнеры (за лечение)</td><td>от 90&nbsp;000&nbsp;₽</td></tr>
+        </table>
+        <table>
+          <caption>Детская стоматология</caption>
+          <tr><td>Первый осмотр и знакомство с кабинетом</td><td>бесплатно</td></tr>
+          <tr><td>Лечение молочного зуба</td><td>от 1&nbsp;500&nbsp;₽</td></tr>
+          <tr><td>Серебрение зуба</td><td>800&nbsp;₽</td></tr>
+        </table>
+        <table>
+          <caption>Эстетика</caption>
+          <tr><td>Отбеливание в кресле</td><td>от 15&nbsp;000&nbsp;₽</td></tr>
+        </table>
+
+        <div class="turn">
+          <span class="v-label">Правило цены</span>
+          <p>Цена в плане – итоговая. План пишем письменно до лечения: если в кресле нашли что-то ещё, останавливаемся, показываем и называем цену. Дальше – только с вашего согласия.</p>
+          <small>Цены на сайте не являются публичной офертой: точная цена зависит от ситуации и фиксируется в плане лечения.</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ДЕЙСТВИЕ -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f6f4f1" aria-label="Записаться">
+      <div class="v-wrap">
+        <div class="close" data-v-spotlight>
+          <div class="close__inner">
+            <div data-v-in data-v-stagger="70">
+              <span class="v-label">Сомневаетесь в цене?</span>
+              <h2 class="v-display v-display--xl">Придите на осмотр</h2>
+              <p>Осмотр, снимок при необходимости и план с ценой по пунктам – за один визит. План можно забрать домой и подумать.</p>
+              <div class="close__btns">
+                <a class="v-btn" href="kontakty.html#zapis" data-v-magnet="0.22" data-v-rise="0">Записаться</a>
+                <a class="v-btn v-btn--ghost" href="uslugi.html">Смотреть услуги</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Ясно · стоматология · Казань</span>
+    <span class="foot__more">ООО «Ясно» · ИНН 1655123456</span>
+    <span>Лицензия ЛО-16-01-003421 от 12.03.2019</span>
+    <span class="foot__warn">Имеются противопоказания. Необходима консультация специалиста.</span>
+  </footer>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  if (window.matchMedia('(max-width: 860px)').matches) {
+    document.getElementById('ceny').setAttribute('data-v-span', '2.7');
+  }
+  Vibe.mount(document.querySelector('.v-page'));
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Зубная формула: пять состояний по --v-p пина (как на главной).
+  (function () {
+    var act = document.getElementById('ceny'), chart = document.getElementById('chart'), ring = document.getElementById('ring'), cap = document.getElementById('chart-cap');
+    if (!act || !chart) return;
+    var svg = chart.querySelector('svg');
+    var caps = ['Осмотр · весь ряд', 'Гигиена · вся формула', 'Кариес · зуб 3.6', 'Удаление · зуб 2.6', 'Коронка · зуб 4.6'];
+    var teeth = [null, null, '36', '26', '46'];
+    var last = -1;
+    function place(n) {
+      var t = n && svg.querySelector('.t[data-n="' + n + '"] .t__base');
+      if (!t) return;
+      var b = t.getBoundingClientRect(), c = svg.getBoundingClientRect();
+      ring.style.left = ((b.left + b.width / 2 - c.left) / c.width * 100).toFixed(2) + '%';
+      ring.style.top = ((b.top + b.height / 2 - c.top) / c.height * 100).toFixed(2) + '%';
+    }
+    function set(s) {
+      if (s === last) return;
+      last = s;
+      for (var i = 0; i < 5; i++) chart.classList.toggle('is-s' + i, i === s);
+      cap.textContent = caps[s];
+      place(teeth[s]);
+    }
+    var live = false, lastP = -1;
+    function tick() {
+      var p = parseFloat(getComputedStyle(act).getPropertyValue('--v-p')) || 0;
+      if (p !== lastP) { lastP = p; set(p < 0.21 ? 0 : p < 0.41 ? 1 : p < 0.61 ? 2 : p < 0.81 ? 3 : 4); }
+      if (live) requestAnimationFrame(tick);
+    }
+    new IntersectionObserver(function (es) { live = es[0].isIntersecting; if (live) tick(); }).observe(act);
+    window.addEventListener('resize', function () { place(teeth[last]); });
+    set(0);
+  })();
+</script>
+</body>
+</html>

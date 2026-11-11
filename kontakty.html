@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Контакты и запись · Ясно, стоматология в Казани</title>
+<meta name="description" content="Запись в стоматологию «Ясно» в Казани: выберите услугу, оставьте имя и телефон, удобный день и время. Адрес ул. Баумана, 32, телефон +7 (843) 207-00-00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Manrope:wght@400;500;600&display=block" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%274%27 y=%274%27 width=%2724%27 height=%2724%27 rx=%2710%27 fill=%27%233a3740%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%275%27 fill=%27%23f6f4f1%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  .v-page {
+    --v-canvas: #f6f4f1; --v-surface: #ffffff;
+    --v-ink: #26242a; --v-ink-soft: #5f5a62;
+    --v-accent: #3a3740; --v-accent-ink: #f8f6f3;
+    --v-accent-deep: #5b5560;
+    --v-font-display: "Rubik", "Arial Rounded MT Bold", system-ui, sans-serif;
+    --v-font-text: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 500;
+    --v-track-tight: -0.02em;
+    --v-shadow-color: 45 40 44;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .06), 0 8px 22px rgb(var(--v-shadow-color) / .08);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .08), 0 22px 54px rgb(var(--v-shadow-color) / .14);
+    --v-radius: 16px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --v-section: clamp(3.5rem, 8vw, 7rem);
+  }
+  html, body { margin: 0; background: #f6f4f1; }
+  .v-page .v-lede { font-weight: 400; }
+  .v-page .v-label { font-weight: 600; }
+  .v-page .v-btn { font-size: var(--v-t-sm); }
+
+  /* шапка */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter);
+    background: rgb(246 244 241 / 0); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(246 244 241 / .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); letter-spacing: -0.01em; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; min-height: 44px; white-space: nowrap; }
+  .bar__mark i { width: .8em; height: .8em; border-radius: .3em; background: var(--v-accent); display: inline-block; position: relative; flex: none; }
+  .bar__mark i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 34%; height: 34%; margin: -17% 0 0 -17%; border-radius: 50%; background: var(--v-canvas); }
+  .qnav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+  .qnav a { text-decoration: none; color: var(--v-ink-soft); display: inline-flex; align-items: center; gap: .4em; min-height: 44px; transition: color .16s var(--v-ease-out); }
+  .qnav a[aria-current="page"] { color: var(--v-ink); box-shadow: inset 0 -2px 0 var(--v-accent); }
+  @media (hover: hover) and (pointer: fine) { .qnav a:hover { color: var(--v-ink); } }
+  .bar__right { display: flex; align-items: center; gap: var(--v-4); }
+  .bar__tel { text-decoration: none; font-weight: 600; font-size: var(--v-t-sm); color: var(--v-ink); display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-2); white-space: nowrap; }
+  .bar .v-btn { padding: .7em 1.3em; }
+  @media (max-width: 1100px) { .qnav { display: none; } }
+  @media (max-width: 700px) {
+    .bar__tel { display: none; }
+    .bar__mark { font-size: 1.1rem; }
+    .bar .v-btn { padding: 0 1em; min-height: 44px; }
+    .bar__right { gap: var(--v-2); }
+  }
+
+  /* заголовок страницы */
+  .pagehead { padding-top: clamp(7rem, 16vh, 10rem); }
+  .pagehead .v-label { display: block; margin-bottom: var(--v-4); color: var(--v-accent-deep); }
+  .pagehead .v-display { font-size: clamp(2rem, 1.2rem + 2.6vw, 3.4rem); max-width: 20ch; }
+  .pagehead p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 56ch; font-size: var(--v-t-md, 1.125rem); text-wrap: pretty; }
+
+  /* многошаговая форма */
+  .book { margin-top: var(--v-7); max-width: 40rem; }
+  .steps { display: flex; align-items: center; gap: var(--v-3); margin-bottom: var(--v-6); }
+  .steps i { flex: none; width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center;
+    font-size: var(--v-t-xs); font-weight: 600; font-style: normal; color: var(--v-ink-soft);
+    background: var(--v-surface); border: 1px solid var(--v-hair); transition: background-color .3s var(--v-ease-out), color .3s var(--v-ease-out), border-color .3s var(--v-ease-out); }
+  .steps i.is-on { background: var(--v-accent); border-color: var(--v-accent); color: var(--v-accent-ink); }
+  .steps i.is-done { border-color: var(--v-accent); color: var(--v-accent); }
+  .steps em { flex: 1 1 auto; height: 1px; background: var(--v-hair); }
+  .steps em.is-done { background: var(--v-accent); }
+  .steps b { font-weight: 600; font-size: var(--v-t-sm); }
+  .panel { display: none; }
+  .panel.is-on { display: block; animation: fadein .35s var(--v-ease-out); }
+  @keyframes fadein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .panel h2 { font-family: var(--v-font-display); font-weight: 500; font-size: clamp(1.4rem, 1rem + 1.4vw, 1.9rem); letter-spacing: var(--v-track-tight); line-height: 1.12; text-wrap: balance; }
+  .panel .hint { margin-top: var(--v-3); color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 46ch; text-wrap: pretty; }
+  .opts { margin-top: var(--v-5); display: grid; gap: var(--v-3); }
+  .opts label { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: var(--v-3) var(--v-4); align-items: center;
+    padding: var(--v-4) var(--v-5); border-radius: var(--v-radius); background: var(--v-surface); border: 1px solid var(--v-hair);
+    cursor: pointer; transition: border-color .2s var(--v-ease-out), box-shadow .2s var(--v-ease-out); }
+  @media (hover: hover) { .opts label:hover { border-color: var(--v-accent-deep); } }
+  .opts input { position: absolute; opacity: 0; pointer-events: none; }
+  .opts b { font-weight: 600; }
+  .opts small { color: var(--v-ink-soft); font-size: var(--v-t-xs); display: block; margin-top: .15em; }
+  .opts .pr { font-variant-numeric: tabular-nums; color: var(--v-ink-soft); font-size: var(--v-t-sm); white-space: nowrap; }
+  .opts .dot { width: 1.1rem; height: 1.1rem; border-radius: 50%; border: 2px solid var(--v-hair-strong); display: inline-block; transition: border-color .2s var(--v-ease-out); }
+  .opts input:checked + .dot { border-color: var(--v-accent); box-shadow: inset 0 0 0 3px var(--v-surface), inset 0 0 0 8px var(--v-accent); }
+  .opts label:has(input:checked) { border-color: var(--v-accent); box-shadow: var(--v-e1); }
+  .field { margin-top: var(--v-5); display: grid; gap: var(--v-4); }
+  .field label { display: grid; gap: var(--v-2); font-weight: 600; font-size: var(--v-t-sm); }
+  .field input { font: inherit; padding: .85em 1em; border-radius: 12px; border: 1px solid var(--v-hair-strong); background: var(--v-surface); color: var(--v-ink); }
+  .field input:focus { outline: 2px solid var(--v-accent); outline-offset: 2px; border-color: var(--v-accent); }
+  .field input.is-bad { border-color: #a4443c; }
+  .field .err { display: none; color: #a4443c; font-size: var(--v-t-xs); font-weight: 600; }
+  .field .err.is-on { display: block; }
+  .slots { margin-top: var(--v-5); display: grid; gap: var(--v-4); }
+  .slots legend { font-weight: 600; font-size: var(--v-t-sm); margin-bottom: var(--v-2); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--v-2); }
+  .chips label { position: relative; cursor: pointer; }
+  .chips input { position: absolute; opacity: 0; pointer-events: none; }
+  .chips span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.1em; border-radius: 999px;
+    border: 1px solid var(--v-hair); background: var(--v-surface); font-size: var(--v-t-sm); transition: border-color .2s var(--v-ease-out), background-color .2s var(--v-ease-out), color .2s var(--v-ease-out); }
+  .chips input:checked + span { background: var(--v-accent); border-color: var(--v-accent); color: var(--v-accent-ink); }
+  .chips input:focus-visible + span { outline: 2px solid var(--v-accent); outline-offset: 2px; }
+  .nav { margin-top: var(--v-6); display: flex; flex-wrap: wrap; gap: var(--v-3); align-items: center; }
+  .nav .v-btn { border: 0; cursor: pointer; font-family: inherit; }
+  .nav .back { background: none; border: 0; padding: .7em 1em; font: inherit; font-size: var(--v-t-sm); color: var(--v-ink-soft); cursor: pointer; }
+  @media (hover: hover) { .nav .back:hover { color: var(--v-ink); } }
+  .sum { margin-top: var(--v-4); padding: var(--v-4) var(--v-5); border-radius: var(--v-radius); background: var(--v-surface); border: 1px solid var(--v-hair); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .sum b { color: var(--v-ink); font-weight: 600; }
+  /* экран «принято» */
+  .done { text-align: left; }
+  .done .ok { width: 3.4rem; height: 3.4rem; border-radius: 50%; background: var(--v-accent); color: var(--v-accent-ink); display: grid; place-items: center; margin-bottom: var(--v-5); }
+  .done .ok svg { width: 1.6rem; height: 1.6rem; }
+  .done h2 { font-family: var(--v-font-display); font-weight: 500; font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.2rem); letter-spacing: var(--v-track-tight); line-height: 1.1; text-wrap: balance; }
+  .done p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 46ch; text-wrap: pretty; }
+  .done .again { margin-top: var(--v-5); }
+
+  /* контакты */
+  .contact { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--v-8) var(--v-9); align-items: start; }
+  .contact__tel { display: inline-block; font-family: var(--v-font-display); font-weight: 500; font-size: clamp(1.8rem, 1.2rem + 2vw, 2.8rem); letter-spacing: -0.015em; text-decoration: none; color: var(--v-ink); margin-top: var(--v-3); }
+  @media (hover: hover) { .contact__tel:hover { color: var(--v-accent-deep); } }
+  .contact .facts { margin-top: var(--v-6); }
+  .contact__fig { position: sticky; top: calc(var(--v-gutter) + 3.5rem); position: relative; aspect-ratio: 3 / 4; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); background: var(--v-surface); }
+  .contact__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .contact__fig figcaption { position: absolute; left: var(--v-5); bottom: var(--v-4); font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); background: rgb(255 255 255 / .82); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); padding: .35em .8em; border-radius: 999px; }
+  .maplink { display: inline-flex; align-items: center; gap: .4em; margin-top: var(--v-4); font-size: var(--v-t-sm); color: var(--v-ink); text-decoration-color: var(--v-hair-strong); text-underline-offset: .2em; }
+  @media (max-width: 860px) {
+    .contact { grid-template-columns: 1fr; gap: var(--v-6); }
+    .contact__fig { position: relative; top: 0; max-width: 22rem; aspect-ratio: 4 / 3; }
+  }
+
+  /* финал */
+  .close { position: relative; z-index: 3; display: grid; grid-template-rows: 1fr auto; padding: 0 var(--v-gutter);
+    background: radial-gradient(60rem 40rem at calc(var(--v-mx, .7) * 100%) calc(var(--v-my, .4) * 100%), rgb(58 55 64 / .1), transparent 60%); }
+  .close__inner { align-self: center; max-width: 46rem; padding-top: var(--v-9); }
+  .close__inner .v-label { display: block; margin-bottom: var(--v-5); }
+  .close__inner .v-display { font-size: var(--v-t-3xl); line-height: 1; max-width: 14ch; }
+  .close__inner p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 40ch; text-wrap: pretty; }
+  .close__btns { margin-top: var(--v-6); display: flex; flex-wrap: wrap; gap: var(--v-3); }
+  .foot { display: grid; grid-template-columns: auto 1fr auto; gap: var(--v-4) var(--v-6); align-items: baseline; padding: var(--v-6) var(--v-gutter); border-top: 1px solid var(--v-hair);
+    background: rgb(246 244 241 / .84); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .foot__warn { grid-column: 1 / -1; color: var(--v-ink); font-weight: 600; letter-spacing: .01em; }
+  @media (max-width: 860px) {
+    .close__inner .v-display { font-size: var(--v-t-2xl); max-width: none; }
+    .foot { grid-template-columns: 1fr; gap: var(--v-2); font-size: var(--v-t-sm); padding: var(--v-5) var(--v-gutter) calc(var(--v-5) + env(safe-area-inset-bottom)); }
+    .foot__more { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="index.html"><i aria-hidden="true"></i>Ясно</a>
+    <nav class="qnav" aria-label="Разделы сайта">
+      <a href="uslugi.html">Услуги</a>
+      <a href="tseny.html">Цены</a>
+      <a href="vrachi.html">Врачи</a>
+      <a href="o-klinike.html">О клинике</a>
+      <a href="kontakty.html" aria-current="page">Контакты</a>
+    </nav>
+    <div class="bar__right">
+      <a class="bar__tel" href="tel:+78432070000">+7 (843) 207-00-00</a>
+      <a class="v-btn" href="#zapis">Записаться</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="v-section pagehead" data-v-act="flow" data-v-drift="#f6f4f1" aria-label="Запись в клинику" id="zapis">
+      <div class="v-wrap">
+        <div data-v-in data-v-stagger="70">
+          <span class="v-label">Запись</span>
+          <h1 class="v-display">Запишитесь на своё время</h1>
+          <p>Три коротких шага – и мы перезвоним, чтобы подтвердить визит. Никаких рассылок: номер нужен только для звонка администратора.</p>
+        </div>
+
+        <form class="book" id="book" novalidate>
+          <div class="steps" aria-hidden="true">
+            <i data-st="1" class="is-on">1</i><em data-st="1"></em>
+            <i data-st="2">2</i><em data-st="2"></em>
+            <i data-st="3">3</i>
+          </div>
+
+          <!-- шаг 1 · услуга -->
+          <fieldset class="panel is-on" data-step="1">
+            <h2>Что нужно сделать?</h2>
+            <p class="hint">Выберите одно – если сомневаетесь, берите «Осмотр»: врач посмотрит и напишет план.</p>
+            <div class="opts">
+              <label>
+                <input type="radio" name="svc" value="Осмотр и консультация">
+                <span class="dot" aria-hidden="true"></span>
+                <span><b>Осмотр и консультация</b><small>снимок при необходимости, план с ценой письменно</small></span>
+                <span class="pr">900&nbsp;₽</span>
+              </label>
+              <label>
+                <input type="radio" name="svc" value="Профессиональная гигиена">
+                <span class="dot" aria-hidden="true"></span>
+                <span><b>Профессиональная гигиена</b><small>ультразвук, пескоструй, полировка – около часа</small></span>
+                <span class="pr">4&nbsp;500&nbsp;₽</span>
+              </label>
+              <label>
+                <input type="radio" name="svc" value="Лечение кариеса">
+                <span class="dot" aria-hidden="true"></span>
+                <span><b>Лечение кариеса</b><small>анестезия и работа под микроскопом, пломба за один визит</small></span>
+                <span class="pr">от 3&nbsp;500&nbsp;₽</span>
+              </label>
+              <label>
+                <input type="radio" name="svc" value="Имплантация (консультация)">
+                <span class="dot" aria-hidden="true"></span>
+                <span><b>Имплантация – консультация</b><small>КТ и план этапов с ценой каждого</small></span>
+                <span class="pr">КТ от 1&nbsp;500&nbsp;₽</span>
+              </label>
+              <label>
+                <input type="radio" name="svc" value="Отбеливание">
+                <span class="dot" aria-hidden="true"></span>
+                <span><b>Отбеливание</b><small>только после осмотра и гигиены – сначала здоровье, потом цвет</small></span>
+                <span class="pr">от 15&nbsp;000&nbsp;₽</span>
+              </label>
+              <label>
+                <input type="radio" name="svc" value="Приём ребёнка">
+                <span class="dot" aria-hidden="true"></span>
+                <span><b>Приём ребёнка</b><small>первый визит – знакомство с кабинетом, лечение со второго</small></span>
+                <span class="pr">от 1&nbsp;500&nbsp;₽</span>
+              </label>
+            </div>
+            <div class="nav">
+              <button type="button" class="v-btn" data-next disabled>Дальше</button>
+            </div>
+          </fieldset>
+
+          <!-- шаг 2 · имя и телефон -->
+          <fieldset class="panel" data-step="2">
+            <h2>Как к вам обращаться?</h2>
+            <p class="hint">Оставьте имя и телефон – перезвоним в рабочее время и договоримся о визите.</p>
+            <div class="field">
+              <label>Ваше имя
+                <input type="text" name="name" autocomplete="name" placeholder="Например, Айгуль">
+                <span class="err" data-err="name">Напишите имя – хотя бы два символа.</span>
+              </label>
+              <label>Телефон
+                <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__">
+                <span class="err" data-err="phone">Похоже, в номере не хватает цифр. Нужно 10–11.</span>
+              </label>
+            </div>
+            <div class="nav">
+              <button type="button" class="back" data-prev>Назад</button>
+              <button type="button" class="v-btn" data-next>Дальше</button>
+            </div>
+          </fieldset>
+
+          <!-- шаг 3 · день и время -->
+          <fieldset class="panel" data-step="3">
+            <h2>Когда удобно?</h2>
+            <p class="hint">Предложите день и время – подтвердим по телефону. Если не знаете, просто оставьте как есть.</p>
+            <div class="slots">
+              <fieldset class="chips" style="border:0;padding:0;margin:0">
+                <legend>День недели</legend>
+                <label><input type="radio" name="day" value="Пн"><span>Пн</span></label>
+                <label><input type="radio" name="day" value="Вт"><span>Вт</span></label>
+                <label><input type="radio" name="day" value="Ср"><span>Ср</span></label>
+                <label><input type="radio" name="day" value="Чт"><span>Чт</span></label>
+                <label><input type="radio" name="day" value="Пт"><span>Пт</span></label>
+                <label><input type="radio" name="day" value="Сб"><span>Сб</span></label>
+              </fieldset>
+              <fieldset class="chips" style="border:0;padding:0;margin:0">
+                <legend>Время</legend>
+                <label><input type="radio" name="time" value="10:00"><span>10:00</span></label>
+                <label><input type="radio" name="time" value="12:00"><span>12:00</span></label>
+                <label><input type="radio" name="time" value="14:00"><span>14:00</span></label>
+                <label><input type="radio" name="time" value="16:00"><span>16:00</span></label>
+                <label><input type="radio" name="time" value="18:00"><span>18:00</span></label>
+              </fieldset>
+            </div>
+            <div class="sum" id="sum" aria-live="polite"></div>
+            <div class="nav">
+              <button type="button" class="back" data-prev>Назад</button>
+              <button type="submit" class="v-btn">Отправить заявку</button>
+            </div>
+          </fieldset>
+
+          <!-- экран «принято» -->
+          <div class="panel done" data-step="4" role="status">
+            <span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></svg></span>
+            <h2>Заявка принята</h2>
+            <p id="done-text">Спасибо! Администратор позвонит в рабочее время, чтобы подтвердить визит. Если план изменится – просто позвоните нам.</p>
+            <div class="again"><button type="button" class="v-btn v-btn--ghost" data-reset>Записать ещё одного человека</button></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="v-section" data-v-act="flow" data-v-drift="#efece7" aria-label="Контакты клиники">
+      <div class="v-wrap contact">
+        <div data-v-in data-v-stagger="70">
+          <span class="v-label">Контакты</span>
+          <a class="contact__tel" href="tel:+78432070000">+7 (843) 207-00-00</a>
+          <ul class="facts">
+            <li><b>Адрес</b><span>г. Казань, ул. Баумана, 32 · вход со двора, второй этаж</span></li>
+            <li><b>Часы работы</b><span>Пн–Пт 9:00–20:00 · Сб 10:00–18:00 · Вс – по договорённости</span></li>
+            <li><b>Почта</b><span>hello@yasno-dental.ru – для документов и вопросов после лечения</span></li>
+            <li><b>Как добраться</b><span>Парковка во дворе, 15 минут от метро «Площадь Тукая»</span></li>
+          </ul>
+          <a class="maplink" href="https://yandex.ru/maps/?text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0%2032" target="_blank" rel="noopener">Открыть в Яндекс.Картах ↗</a>
+        </div>
+        <figure class="contact__fig" data-v-reveal="right" data-v-reveal-at="0.12 0.5">
+          <img src="assets/reception.webp" alt="Ресепшн клиники: светлая стойка, растения, мягкий свет" width="1200" height="1600" loading="lazy" decoding="async">
+          <figcaption>Ждём вас на Баумана, 32</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ДЕЙСТВИЕ -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f6f4f1" aria-label="Остались вопросы">
+      <div class="v-wrap">
+        <div class="close" data-v-spotlight>
+          <div class="close__inner">
+            <div data-v-in data-v-stagger="70">
+              <span class="v-label">Остались вопросы?</span>
+              <h2 class="v-display v-display--xl">Позвоните – расскажем</h2>
+              <p>Цены, сроки, «можно ли прийти с ребёнком» – ответим по телефону в рабочее время. Или напишите на почту.</p>
+              <div class="close__btns">
+                <a class="v-btn" href="tel:+78432070000" data-v-magnet="0.22" data-v-rise="0">+7 (843) 207-00-00</a>
+                <a class="v-btn v-btn--ghost" href="tseny.html">Смотреть цены</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Ясно · стоматология · Казань</span>
+    <span class="foot__more">ООО «Ясно» · ИНН 1655123456</span>
+    <span>Лицензия ЛО-16-01-003421 от 12.03.2019</span>
+    <span class="foot__warn">Имеются противопоказания. Необходима консультация специалиста.</span>
+  </footer>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  Vibe.mount(document.querySelector('.v-page'));
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Многошаговая форма записи (демо, без бэкенда)
+  (function () {
+    var form = document.getElementById('book'); if (!form) return;
+    var panels = form.querySelectorAll('.panel');
+    var dots = form.querySelectorAll('.steps i');
+    var bars = form.querySelectorAll('.steps em');
+    var step = 1;
+    var data = { svc: '', name: '', phone: '', day: '', time: '' };
+
+    function show(n) {
+      step = n;
+      panels.forEach(function (p) { p.classList.toggle('is-on', +p.dataset.step === n); });
+      dots.forEach(function (d) {
+        var s = +d.dataset.st;
+        d.classList.toggle('is-on', s === n);
+        d.classList.toggle('is-done', s < n);
+      });
+      bars.forEach(function (b) { b.classList.toggle('is-done', +b.dataset.st < n); });
+      var on = form.querySelector('.panel.is-on');
+      if (on) { var h = on.querySelector('h2, .ok'); if (h) h.setAttribute('tabindex', '-1'), h.focus({ preventScroll: true }); }
+      if (n === 3) fillSum();
+    }
+
+    function val(name) { var el = form.querySelector('[name="' + name + '"]:checked') || form.querySelector('[name="' + name + '"]'); return el ? el.value.trim() : ''; }
+
+    // шаг 1: разблокируем «Дальше» только после выбора услуги
+    var next1 = form.querySelector('[data-step="1"] [data-next]');
+    form.querySelectorAll('[name="svc"]').forEach(function (r) {
+      r.addEventListener('change', function () { next1.disabled = !r.checked; });
+    });
+
+    // маска телефона: цифры, скобки, дефисы, +
+    var phone = form.querySelector('[name="phone"]');
+    phone.addEventListener('input', function () {
+      var d = phone.value.replace(/\D/g, '');
+      if (d.charAt(0) === '8') d = '7' + d.slice(1);
+      if (d.charAt(0) !== '7') d = '7' + d;
+      d = d.slice(0, 11);
+      var out = '+7';
+      if (d.length > 1) out += ' (' + d.slice(1, 4);
+      if (d.length >= 4) out += ') ' + d.slice(4, 7);
+      if (d.length >= 7) out += '-' + d.slice(7, 9);
+      if (d.length >= 9) out += '-' + d.slice(9, 11);
+      phone.value = out === '+7' ? '' : out;
+      phone.classList.remove('is-bad');
+      form.querySelector('[data-err="phone"]').classList.remove('is-on');
+    });
+
+    form.querySelectorAll('[data-next]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        if (step === 2 && !checkStep2()) return;
+        show(step + 1);
+      });
+    });
+    form.querySelectorAll('[data-prev]').forEach(function (b) {
+      b.addEventListener('click', function () { show(step - 1); });
+    });
+
+    function checkStep2() {
+      var ok = true;
+      var name = form.querySelector('[name="name"]');
+      var badName = name.value.trim().length < 2;
+      name.classList.toggle('is-bad', badName);
+      form.querySelector('[data-err="name"]').classList.toggle('is-on', badName);
+      if (badName) ok = false;
+      var digits = phone.value.replace(/\D/g, '');
+      var badPhone = digits.length < 11;
+      phone.classList.toggle('is-bad', badPhone);
+      form.querySelector('[data-err="phone"]').classList.toggle('is-on', badPhone);
+      if (badPhone) ok = false;
+      if (ok) { data.name = name.value.trim(); data.phone = phone.value; }
+      return ok;
+    }
+
+    function fillSum() {
+      data.svc = val('svc');
+      data.day = val('day') || 'любой будний день';
+      data.time = val('time') || 'подберём по телефону';
+      document.getElementById('sum').innerHTML =
+        'Проверьте: <b>' + escapeHtml(data.svc) + '</b> · ' +
+        escapeHtml(data.name || 'имя не указано') + ' · ' +
+        escapeHtml(data.phone || 'телефон не указан') + ' · ' +
+        escapeHtml(data.day) + ', ' + escapeHtml(data.time);
+    }
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; });
+    }
+    form.querySelectorAll('[name="day"], [name="time"]').forEach(function (r) {
+      r.addEventListener('change', fillSum);
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      data.svc = val('svc'); data.day = val('day'); data.time = val('time');
+      if (data.name && data.svc) {
+        document.getElementById('done-text').textContent =
+          data.name + ', спасибо! Заявка на «' + data.svc + '» принята. ' +
+          (data.day ? 'Предложили: ' + data.day + (data.time ? ', ' + data.time : '') + '. ' : '') +
+          'Администратор позвонит в рабочее время, чтобы подтвердить визит.';
+      }
+      show(4);
+    });
+
+    form.querySelector('[data-reset]').addEventListener('click', function () {
+      form.reset();
+      next1.disabled = true;
+      data = { svc: '', name: '', phone: '', day: '', time: '' };
+      show(1);
+    });
+  })();
+</script>
+</body>
+</html>
